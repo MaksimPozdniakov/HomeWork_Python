@@ -7,3 +7,6 @@ if day_week > 0 and day_week <= 5:
     print('Это будний день ')
 elif day_week > 5 and day_week <= 7:
     print('Это выходной')
+else:
+    print('Такого дня недели нет!')
+
