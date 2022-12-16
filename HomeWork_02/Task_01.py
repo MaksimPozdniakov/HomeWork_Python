@@ -16,5 +16,5 @@ for i in list_num:
 for i in list_num:
     count_sum += int(i)
 
-print(count_sum)
+print(f'Сумма цифр в нашем числе -> {count_sum}')
 

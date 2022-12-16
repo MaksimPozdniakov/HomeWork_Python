@@ -5,11 +5,13 @@
 
 number = int(input('Введите число последовательности: '))
 my_list = []
-for n in range(number + 1):
-    if n > 0:
-        result = (1 + 1/n)**n
-        my_list.append(round(result, 2))
+for n in range(1, number + 1):
+    result = (1 + 1/n)**n
 
+    if result - int(result) == 0:
+        result = int(result)
+
+    my_list.append(round(result, 2))
 
 print(my_list)
 print(sum(my_list))
