@@ -3,19 +3,24 @@
 # Пример:
 # [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-# import random
-#
-# my_float_list = [round(random.uniform(2, 5), 2) for i in range(7)]
-# print(my_float_list)
-#
-# min = my_float_list[0]
-# max = my_float_list[0]
-#
-# for i in range(len(my_float_list)):
-#     if my_float_list[i] < min:
-#         min = my_float_list[i]
-#     elif my_float_list[i] > max:
-#         max = my_float_list[i]
-# print(min)
-# print(max)
-# print(round((max - min), 2))
+import random
+
+# my_float_list = [1.1, 1.2, 3.1, 5, 10.01]
+my_float_list = [round(random.uniform(2, 5), 2) for i in range(4)]
+new_list = []
+
+
+for i in my_float_list:
+    if isinstance(i, float):
+        new_list.append(i % 1)
+
+
+result = round(max(new_list) - min(new_list), 2)
+print(f'Список вещественных чисел: {my_float_list}')
+print(f'Разница между максимальной и минимальной дробной частью: {result}')
+
+
+
+
+
+
