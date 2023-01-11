@@ -15,10 +15,10 @@ def convert_to_polynomial(polynomial_dict: dict) -> str:
     for key, value in polynomial_dict.items():
         if value != 0:
             new_polynomial.append(f'{value}*x**{key}')
-    new_equation = ' + '.join(new_polynomial) + ' = 0'
-    new_equation = new_equation.replace('+ -', '- ')\
+    new_polynomial = ' + '.join(new_polynomial) + ' = 0'
+    new_polynomial = new_polynomial.replace('+ -', '- ')\
         .replace(' 1*x', '  x').replace('*x**0', '').replace('x**1', 'x')
-    return new_equation
+    return new_polynomial
 
 polynomial = create_polynomialdict()
 full_polynomial = convert_to_polynomial(polynomial)
