@@ -24,8 +24,8 @@ polynomial = create_polynomialdict()
 full_polynomial = convert_to_polynomial(polynomial)
 print(full_polynomial)
 
-with open('file for the first task.txt', 'w', encoding='UTF-8') as polynomial:
-    polynomial.write('Результат: ')
+with open('file2 for the second task.txt', 'w', encoding='UTF-8') as polynomial:
+    polynomial.write('Второй многочлен: ')
     polynomial.write(full_polynomial)
 
 
